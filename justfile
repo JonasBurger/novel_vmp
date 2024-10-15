@@ -1,5 +1,8 @@
 set shell := ["fish", "-c"]
 
+build-scanners:
+  cd orchestrator/; go run cmd/build_scanners.go
+
 run:
   cd orchestrator/; go run main.go master
 
@@ -22,4 +25,12 @@ elk:
   echo "username: elastic"
   echo "password: changeme"
   echo "=================================="
-  cd docker-elk/; docker compose up
+  cd docker-elk/; docker compose up -d
+
+openvas:
+  echo "OpenVAS URL: http://localhost:9392/"
+  echo "username: admin"
+  echo "password: admin"
+  echo "=================================="
+  cd openvas/; docker compose up -d
+  
