@@ -1,0 +1,27 @@
+# per second per domain/ip
+# if a ip hosts multiple domains, the ip and each domain has its own rate limit
+max_requests: 50
+
+keyfile: keyfile.yaml
+
+#domain-hint-file: domain-hint-file.yaml
+
+scanners:
+  #- scanners/scanner_dummy/
+  - scanners/scanner_nuclei/
+  - scanners/scanner_subfinder/
+  - scanners/scanner_wapalyzer/
+  - scanners/scanner_katana/
+  - scanners/scanner_nmap/
+  - scanners/scanner_openvas/
+  - scanners/scanner_wpscan/
+
+scope:
+  ips: # if empty disable infrastructure scans. and combination with domains
+    - 127.0.0.0/24
+
+  domains: # merged with domainlist.txt. disabled if empty. if not empty scans only domains in the list
+    []
+
+  excluded_ips: [] # ips to exclude from scanning (even if they are in the scope)
+  excluded_domains: [] # domains to exclude from scanning (even if they are in the scope)

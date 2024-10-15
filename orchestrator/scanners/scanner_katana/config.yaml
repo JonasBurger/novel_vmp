@@ -1,0 +1,8 @@
+inputs:
+  - host
+
+outputs: # only used for sanity checks
+  - url
+
+rate_limit_type: per_domain
+instances: 5

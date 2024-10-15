@@ -1,0 +1,8 @@
+inputs:
+  - domain
+
+outputs: # only used for sanity checks
+  - domain
+
+instances: 1 # i don't want to run into ratelimits for the used apis
+rate_limit_type: disabled

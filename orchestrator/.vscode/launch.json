@@ -1,0 +1,103 @@
+{
+  // Use IntelliSense to learn about possible attributes.
+  // Hover to view descriptions of existing attributes.
+  // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "name": "Launch Package",
+      "type": "go",
+      "request": "launch",
+      "mode": "auto",
+      "program": "main.go",
+      "args": [
+        "master"
+      ]
+    },
+    {
+      "name": "Scanner-test",
+      "type": "go",
+      "request": "launch",
+      "mode": "auto",
+      "program": "main.go",
+      "args": [
+        "master",
+        "--scanner-test"
+      ]
+    },
+    {
+      "name": "Launch build scanners",
+      "type": "go",
+      "request": "launch",
+      "mode": "auto",
+      "program": "cmd/build_scanners.go",
+      "args": [
+        "master"
+      ]
+    },
+    {
+      "name": "Launch scanner: Katana",
+      "type": "go",
+      "request": "launch",
+      "mode": "auto",
+      "program": "scanners/scanner_katana/main.go",
+      "args": [],
+      "env": {
+        "NOVELVMP_MASTER_HOST": "localhost:1323",
+        "NOVELVMP_TEMPLATE_NAME": "scanner_katana",
+        "NOVELVMP_SCANNER_NAME": "scanner_katana-1",
+        "NOVELVMP_SCANNER_PORT": "10001",
+        //"http_proxy": "http://localhost:7000",
+      }
+    },
+    {
+      "name": "Launch scanner: wapalyzer",
+      "type": "go",
+      "request": "launch",
+      "mode": "auto",
+      "program": "scanners/scanner_wapalyzer/main.go",
+      "args": [],
+      "env": {
+        "NOVELVMP_MASTER_HOST": "localhost:1323",
+        "NOVELVMP_TEMPLATE_NAME": "scanner_wapalyzer",
+        "NOVELVMP_SCANNER_NAME": "scanner_wapalyzer-1",
+        "NOVELVMP_SCANNER_PORT": "10001",
+      },
+    },
+    {
+      "name": "Launch scanner: nmap",
+      "type": "go",
+      "request": "launch",
+      "mode": "auto",
+      "program": "scanners/scanner_nmap/main.go",
+      "args": [],
+      "env": {
+        "NOVELVMP_MASTER_HOST": "localhost:1323",
+        "NOVELVMP_TEMPLATE_NAME": "scanner_nmap",
+        "NOVELVMP_SCANNER_NAME": "scanner_nmap-1",
+        "NOVELVMP_SCANNER_PORT": "10001",
+      },
+    },
+    {
+      "name": "Launch scanner: wpscan",
+      "type": "go",
+      "request": "launch",
+      "mode": "auto",
+      "program": "scanners/scanner_wpscan/main.go",
+      "args": [],
+      "env": {
+        "NOVELVMP_MASTER_HOST": "localhost:1323",
+        "NOVELVMP_TEMPLATE_NAME": "scanner_wpscan",
+        "NOVELVMP_SCANNER_NAME": "scanner_wpscan-1",
+        "NOVELVMP_SCANNER_PORT": "10001",
+      },
+    },
+    {
+      "name": "Attach to Process",
+      "type": "go",
+      "request": "attach",
+      "mode": "local",
+      "processId": "${command:pickProcess}"
+    }
+  ]
+}

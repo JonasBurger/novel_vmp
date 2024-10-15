@@ -1,0 +1,9 @@
+inputs: # artifacts
+  - ip
+  - domain
+
+outputs: # only used for sanity checks
+  - finding
+
+rate_limit_type: per_domain
+instances: 40

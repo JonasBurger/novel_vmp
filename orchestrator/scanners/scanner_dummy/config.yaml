@@ -1,0 +1,5 @@
+inputs: # artifacts
+  - host
+
+outputs: # only used for sanity checks
+  - finding

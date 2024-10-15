@@ -1,0 +1,23 @@
+{
+  // Use IntelliSense to learn about possible attributes.
+  // Hover to view descriptions of existing attributes.
+  // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "name": "Python Debugger: main.py",
+      "type": "debugpy",
+      "request": "launch",
+      "program": "main.py",
+      "console": "integratedTerminal",
+      "justMyCode": false,
+      "env": {
+        "NOVELVMP_MASTER_HOST": "localhost:1323",
+        "NOVELVMP_TEMPLATE_NAME": "scanner_openvas",
+        "NOVELVMP_SCANNER_NAME": "scanner_openvas-1",
+        "NOVELVMP_SCANNER_PORT": "10001",
+        "NOVELVMP_MAX_REQUESTS": "50",
+      },
+    }
+  ]
+}

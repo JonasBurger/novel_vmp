@@ -1,0 +1,11 @@
+needs_key: wpscan
+
+inputs:
+  - technology
+
+outputs: # only used for sanity checks
+  - technology
+  - finding
+
+rate_limit_type: per_domain
+instances: 1 # api key limitations

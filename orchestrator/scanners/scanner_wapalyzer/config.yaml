@@ -1,0 +1,9 @@
+inputs:
+  - httpmsg
+
+outputs: # only used for sanity checks
+  - technology
+
+instances: 1 # probably don't need more for this simple analyzer
+rate_limit_type: disabled
+ignore_scope: true # is allowed to analyze out-of-scope data (doesn't send requests)

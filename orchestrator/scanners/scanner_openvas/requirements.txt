@@ -1,0 +1,5 @@
+python-gvm
+lxml
+flask
+pydantic
+requests

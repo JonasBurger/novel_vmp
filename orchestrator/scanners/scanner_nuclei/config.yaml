@@ -1,0 +1,10 @@
+inputs:
+  - domain
+  - ip
+  #- host
+
+outputs: # only used for sanity checks
+  - finding
+
+rate_limit_type: per_domain
+instances: 15

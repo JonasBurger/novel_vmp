@@ -1,0 +1,9 @@
+inputs:
+  - ip
+
+outputs: # only used for sanity checks
+  - host
+
+
+rate_limit_type: per_ip
+instances: 1
